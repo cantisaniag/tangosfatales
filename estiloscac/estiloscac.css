@@ -24,9 +24,11 @@
   position: fixed;
   z-index: 2;
   text-align: center;
-
+object-fit: cover;
   background: linear-gradient(to bottom, rgb(85, 85, 85), rgb(58, 58, 58));
 }
+
+
 
 ul {
   list-style: none;
@@ -37,10 +39,18 @@ ul {
   background: linear-gradient(to bottom, rgb(85, 85, 85), rgb(58, 58, 58));
   color: rgb(201, 201, 201);
   text-decoration: none;
-  padding: 15px 20px;
+  /*padding: 15px 20px;*/
+  padding: 1.3vw 2vw;
   display: block;
-  font-size: 1.7rem;
+  font-size: 2vw;
   font-family: var(--fileteado);
+}
+
+@media only screen and (max-width: 600px){
+  .nav li a{
+    padding: 1.2vw 1.7vw;
+    font-size: 2.2vw;
+  }
 }
 
 .nav li a:hover {
@@ -85,18 +95,19 @@ a>img {
 
 .logofileteado {
   font-family: var(--fileteado);
-  letter-spacing: 1.2px;
-  margin: 0px 70px 0px 70px;
+  letter-spacing: .2vw;
+  /*margin: 0px 70px 0px 70px;*/
+  margin: 0 4vw 0 4vw;
 }
 
 
 
 /**************************************banner********************************************/
 
-.imgbanner {
-  width: 100%;
+.imgbanner img{
+  
   overflow: hidden;
-  height: 100%;
+  height: 50vw;
 
 }
 
@@ -110,7 +121,7 @@ a>img {
   margin: auto;
   border-radius: 30px;
   width: 300px;
-  height: 300px;
+  height: 400px;
 
   box-shadow: 10px 10px 10px 10px var(--negro);
   background-color: #c9c9c9;
@@ -118,35 +129,31 @@ a>img {
 
 }
 
-@media screen and (max-width: 600px) {
-  .divisor, .card{
-    display: block;
-  }
-  }
+
 
 .imagen {
   align-self: center;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   transition: all 1s;
   object-fit: cover;
 }
 
 .imagen:hover {
-  width: 320px;
-  height: 320px;
+  width: 420px;
+  height: 420px;
 }
 
 .popupimagen img {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   margin: auto;
   transition: all 4s;
 }
 
 .popupimagen img:hover {
-  width: 320px;
-  height: 320px;
+  width: 420px;
+  height: 420px;
   margin: auto;
 }
 
@@ -256,22 +263,37 @@ a {
   height: 200%;
 }
 
-
+@media only screen and (max-width: 600px) {
+  .card{
+    display: block;
+    width: 95%;
+    padding: 0;
+    
+  }
+  .section{
+    display: block;
+    width: 90%;
+   
+  }
+ 
+  }
 /***********************************baner scroll*******************************************/
 
 .fatales {
-
   font-family: var(--informal);
+}
 
+.section__bailando{
+  height: 300px;
+  margin-bottom: 300px;
 }
 
 .rellax-parallax {
-  width: 100%;
-  height: 100vh;
+  width: 100vw;
+  height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
-
   background: linear-gradient(to right, #FDFBFB, #EBEDEE 70%);
 }
 
@@ -284,6 +306,64 @@ a {
   text-align: center;
 }
 
+.bailando{
+  width: 100vw;
+  filter: grayscale(100%);
+  
+}
+
+@import url("https://fonts.googleapis.com/css?family=Arimo|Oswald");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arimo', sans-serif;
+  scroll-behavior: smooth;
+}
+
+section:first-child {
+  position: relative;
+  height: 10px;
+}
+
+.p-one {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('tango2.jpg');
+  margin-top: 1px;
+  clip-path: polygon(100% 7%, 100% 100%, 0% 93%, 0 0%);
+
+}
+
+@media only screen and (max-width: 600px) {
+ .p-one{
+  margin-top: 40px;
+ }
+  }
+
+.parallax-inner {
+  position: relative;
+  max-height: 500px;
+  background-position: top center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.parallax-inner>h2 {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* media queries */
+@media screen and (max-width:500px) {
+  .parallax-inner {
+    min-height: 350px;
+    background-size: cover;
+  }
+}
 
 
 
@@ -318,8 +398,8 @@ a {
 .overlay-content {
   box-sizing: border-box;
   margin: auto;
-  padding: 50px;
-  width: 60%;
+  padding: 20px;
+  width: 70%;
 
 }
 
@@ -388,55 +468,6 @@ img {
 
 
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Arimo', sans-serif;
-  scroll-behavior: smooth;
-}
-
-section:first-child {
-  position: relative;
-  height: 10px;
-}
-
-.p-one {
-
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('tango2.jpg');
-  margin-top: 100px;
-  clip-path: polygon(100% 7%, 100% 100%, 0% 93%, 0 0%);
-
-}
-
-.parallax-inner {
-  position: relative;
-  min-height: 50px;
-  background-position: top center;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-.parallax-inner>h2 {
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 10px;
-
-
-  left: 0;
-
-  width: 100%;
-  text-align: center;
-}
-
-/* media queries */
-@media screen and (max-width:500px) {
-  .parallax-inner {
-    min-height: 350px;
-    background-size: cover;
-  }
-}
-
 
 
 
@@ -472,9 +503,25 @@ section:first-child {
   text-align: center;
 }
 
+@media only screen and (max-width: 600px){
+  .cont img{
+    float: none;
+    margin: auto;
+    }
+    .cont{
+      width: 95%;
+    }
+}
 
+/****************************************************************video****************************************************************/
 
+.p-two {
 
+  
+  margin-top: 100px;
+  clip-path: polygon(100% 7%, 100% 100%, 0% 93%, 0 0%);
+
+}
 
 
 
@@ -487,7 +534,18 @@ section:first-child {
   margin-top: 40px;
   padding: 10px;
   background-image: linear-gradient(rgb(68, 68, 68), rgb(173, 173, 173));
-  
+  }
+
+  @media only screen and (max-width: 600px){
+    .containermapa{
+      margin-top: -15rem;
+      width: 95%;
+    }
+  }
+
+.containermapa h2{
+  font-family: var(--fileteado);
+  font-size: 3em;
 }
 
 
@@ -500,12 +558,16 @@ section:first-child {
 
 .column{
   text-align: center;
-  
+  }
+
+.column h2{
+  display: block;
+  text-align: center;
 }
 
-h2{
-  font-family: var(--fileteado);
- 
+.column p{
+  display: block;
+  text-align: center;
 }
 
 
@@ -522,7 +584,7 @@ h2{
   input[type=submit] {
     width: 100%;
     margin-top: 0;
-    display: flex;
+   
   }
 }
 
@@ -541,6 +603,7 @@ h2{
 body {
   position: relative;
   box-sizing: border-box;
+  overflow-x: hidden;
 
 
   width: 100%;
