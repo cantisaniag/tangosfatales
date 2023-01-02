@@ -10,7 +10,20 @@ body {
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #f5f5f5;
+  background-image: url(banner.jpg);
+}
+
+h1{
+  color: azure;
+}
+
+img{
+  filter: grayscale(100%);
+  border-radius: 100%;
+}
+
+a{
+  color: azure;
 }
 
 .form-signin {
@@ -33,7 +46,7 @@ body {
   z-index: 2;
 }
 .form-signin input[type="email"] {
-  margin-bottom: -1px;
+  margin-bottom: 10px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
